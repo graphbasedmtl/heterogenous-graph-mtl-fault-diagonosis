@@ -136,29 +136,7 @@ nobr.widenobr {
 	transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.projcard::before {
-	background-image: linear-gradient(-70deg, #424242, transparent 50%);
-	opacity: 0.07;
-}
 
-.projcard::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-image: linear-gradient(-70deg, #424242, transparent 50%);
-	opacity: 0.07;
-  pointer-events: none;
-
-}
-.projcard:nth-child(2n)::before {
-	background-image: linear-gradient(-250deg, #424242, transparent 50%);
-}
-
-.projcard-grey::before { background-image: linear-gradient(-70deg, #424242, transparent 50%); }
-.projcard-grey:nth-child(2n)::before { background-image: linear-gradient(-250deg, #424242, transparent 50%); }
 
 /* Style for the contribution */
 
@@ -250,3 +228,16 @@ ul.tl li .item-detail {
   display: flex;
   align-items: center; 
 }
+
+
+.pill {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  padding: 10px 50px;
+  border-radius: 50px;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: white; /* Black text */
+  text-align: center;
+}
+
