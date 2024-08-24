@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="en"><head>
+  <title>Graph-Based Multi-Task Learning For Fault Detection In Smart Grid</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Graph-Based Multi-Task Learning For Fault Detection In Smart Grid">
+  <meta property="og:title" content="Graph-Based Multi-Task Learning For Fault Detection In Smart Grid">
+  <meta property="og:description" content="Graph-Based Multi-Task Learning For Fault Detection In Smart Grid">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Graph-Based Multi-Task Learning For Fault Detection In Smart Grid">
+  <meta name="twitter:description" content="Graph-Based Multi-Task Learning For Fault Detection In Smart Grid">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/mod_logo_fav_32x32.png"> 
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link href="css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <script src="js/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Math&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="nd-docs">
+  <div class="nd-pageheader">
+    <div class="container">
+      <h1 class="lead">
+        A Heterogeneous Graph-Based Multi-Task <br>Learning for Fault Event Diagnosis in Smart Grid
+      </h1>
+      <address>
+        <nobr><a href="https://www.linkedin.com/in/dibaloke-chanda" target="_blank">Dibaloke Chanda</a> and </nobr>
+        <nobr><a href="https://www.linkedin.com/in/nasim-yahyasoltani-4b154197" target="_blank">Nasim Yahyasoltani</a></nobr>
+        <br>
+        <nobr><a href="https://www.marquette.edu/computer-science/" target="_blank">Department of Computer Science</a>, <a href="https://www.marquette.edu/" target="_blank">Marquette University</a></nobr>
+      </address>
+
+      <figure class="center_image" style="margin-top: 30px">
+        <center><img src="images/mod_logo.png" style="width:100%; max-width:350px"></center>
+      </figure>
+
+      <h6 class="lead">
+        Machine Learning, Optimization and Data Lab
+      </h6>
+
+    </div>
+  </div> 
+  
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <p>
+        <div class="buttons">
+          <a style="text-decoration:none; color:white;" target="_blank"  href="https://ieeexplore.ieee.org/abstract/document/10285865" class="button">
+            <i class="fa fa-link"></i>
+            <span> Paper Link</span>
+          </a>
+          <a style="text-decoration:none; color:white;" target="_blank" href="https://drive.google.com/file/d/1nfBjpoZ2eipo_oYeew5BV9r738I0bPx6/view?usp=sharing" class="button">
+            <i class="fa-solid fa-sign-hanging"></i>
+            <span> Poster</span>
+          </a>  
+        </div>
+      </p>
+      <p></p>
+      <div class="card projcard projcard-grey">
+        <div class="card-block">
+          <h3>Abstract</h3>
+          <hr>
+          <p style="text-align: justify;">
+            Timely detection of electrical faults is of paramount importance for efficient operation of the smart grid. 
+            To better equip the power grid operators to prevent grid-wide cascading failures, the detection of fault occurrence and 
+            its type must be accompanied by accurately locating the fault. In this work, we propose a multi-task learning architecture 
+            that encodes the graph structure of the distribution network through a shared graph neural network (GNN) to both classify and 
+            detect faults and their locations simultaneously. Deploying GNNs allows for representation learning of the grid structure which 
+            can later be used to optimize grid operation. The proposed model has been tested on the IEEE-123 distribution system. Numerical 
+            tests verify that the proposed algorithm outperforms existing approaches.
+          </p>
+          <h3>Contributions</h3>
+          <hr>
+          <div class="history-tl-container">
+            <ul class="tl">
+              <li class="tl-item">
+                <div class="item-title">Proposed a mutli-head architecture with a GNN backbone for fault event diagonosis</div>
+              </li>
+              <li class="tl-item">
+                <div class="item-title">The multi-head architecture is capable of performing fault type classification and fault localization</div>
+              </li>
+              <li class="tl-item">
+                <div class="item-title">The classification and localization task is done parallely instead of sequentially</div>
+              </li>
+              <li class="tl-item">
+                <div class="item-title">The model is robust to sparse features </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="row">
+      <div class="col">
+        <h2>Why GNN for Fault Event Diagonosis ?</h2>  
+            <p style="text-align: justify;">
+              Power distribution grid have an inherent graph structure.
+              Each node in the graph neural network can encode the voltage phasors and the graph structure can
+              encode the structure of the distribution grid. Other machine learning models like SVM, Random Forest, etc and deep learning architectures like DNN, CNN or Transformer would fail 
+              to incorpoate the graph strucutre information. However, GNN by design works with a graph structure which makes it the ideal architecture to model power distribution grid. 
+            </p>
+        <h2>Need for Multi-Task Approach</h2>  
+            <p style="text-align: justify;">
+            It is possible to use separate models to perform fault classification and fault localization. However, that comes with the drawback that fault localization and fault classification task 
+            is not sharing any information. In addition, it would unecessarily increase the number of parameters and time for inference. A multi-task approach allows for sharing information between
+            tasks and makes the inference time faster. 
+            </p>
+
+        <h2> Need for Sparsity</h2>  
+            <p style="text-align: justify;">
+            If the proposed model is to be deployed in real-life, the voltage phasors encoded in the nodes of the GNN need to be collected through some data acquisition devices like phasor
+            measurement units (PMUs). These devices are extremely costly as they require constant GPS synchronization. Because of this reason, it is not possible to collect data from all 
+            the nodes in the distribution grid. By allowing for sparsity, the performance metrics reflects the practical performance.
+            </p>
+
+        <h2>Multi-Head Architecture with Shared GNN Backbone</h2>
+            <p style="text-align: justify;">
+            The GNN backbone consists of three GCN layers which is used to learn a representation of the input graph. The learned representations are then passed to the two separate dense layer,
+            one working as the classification head and the other working as the localization head.
+            </p>
+
+                  <figure class="center_image" style="margin-top: 30px">
+                    <center><img src="images/architecture.png" style="width:100%; max-width:1200px"></center>
+                    <figcaption>
+                      Proposed Architecture. The input data consists of connectivity information given by the adjacency matrix and node
+                      features and edge weights. There are 3 GCN layers followed by a feature concatenation readout layer which divides into two
+                      separate heads: classification head and location head.
+                    </figcaption>
+                  </figure>
+        </div>
+      </div>
+    
+        <h2>How To Cite This Work</h2>
+            <p>This work was published in 
+              <a href="https://signalprocessingsociety.org/blog/mlsp-2023-2023-ieee-international-workshop-machine-learning-signal-processing" target="_blank">
+                MLSP 2023
+              </a>. Use the following information to cite the paper.
+            </p>
+      <div class="card projcard">
+                <div id="copy">
+                      <h4>Bibliography</h4>
+                </div>
+                  <div class="card-block">
+                    <p id="bibliography-text" style="text-indent: -3em; margin-left: 3em;" class="card-text clickselect">
+                      Chanda, Dibaloke, and Nasim Yahya Soltani. "Graph-Based Multi-Task Learning For Fault Detection In Smart Grid." 
+                      <em>In 2023 IEEE 33rd International Workshop on Machine Learning for Signal Processing (MLSP)</em>, pp. 1-6. IEEE, 2023.
+                      </nobr>
+                    </p>
+                  </div>
+                  
+                      <div id="copy">
+                          <h4>Bibtex </h4><button id="copy-bibtex" style="outline: none; border: none;background-color: transparent;" ><i class="fa fa-clone copy-text"></i></button>
+                      </div>
+                    
+                  <div class="card-block">
+                    <pre id="bibtex-text" class="card-text clickselect">@inproceedings{chanda2023graph,
+                      title={Graph-Based Multi-Task Learning For Fault Detection In Smart Grid},
+                      author={Chanda, Dibaloke and Soltani, Nasim Yahya},
+                      booktitle={2023 IEEE 33rd International Workshop on Machine Learning for Signal Processing (MLSP)},
+                      pages={1--6},
+                      year={2023},
+                      organization={IEEE}
+                    }
+            </pre>
+      </div>
+    </div>
+  </div>
+  </div> 
+
+  <footer class="nd-pagefooter">
+    <div class="row">
+      <div class="col-4 col-md">
+        <a href="https://signalprocessingsociety.org/blog/mlsp-2023-2023-ieee-international-workshop-machine-learning-signal-processing">Published in MLSP 2023</a>
+      </div>
+
+      <div class="col-4 col-md">
+        <a href="#">Machine Learning, Optimization and Data (Mod) Lab</a>
+      </div>
+      <div class="col-4 col-md">
+        <a href="mailto:dibaloke.chanda@marquette.edu">Corresponding Author: Dibaloke Chanda</a>
+      </div>
+    </div>
+  </footer>
+<script src="https://kit.fontawesome.com/a03b5c7365.js" crossorigin="anonymous"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const bibtexText = `@inproceedings{chanda2023graph,
+  title={Graph-Based Multi-Task Learning For Fault Detection In Smart Grid},
+  author={Chanda, Dibaloke and Soltani, Nasim Yahya},
+  booktitle={2023 IEEE 33rd International Workshop on Machine Learning for Signal Processing (MLSP)},
+  pages={1--6},
+  year={2023},
+  organization={IEEE}
+  }`;
+
+  document.getElementById('copy-bibtex').addEventListener('click', function() {
+      copyToClipboard(bibtexText); changeIcon(this);
+    });
+
+    function copyToClipboard(text) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+    }
+
+    function changeIcon(button) {
+      const icon = button.querySelector('i');
+      icon.classList.remove('fa-clone');
+      icon.classList.add('fa-check');
+      setTimeout(() => {
+        icon.classList.remove('fa-check');
+        icon.classList.add('fa-clone');
+      }, 2000); // Change back to the original icon after 2 seconds
+    }
+  });
+</script>
+</body>
+</html>
