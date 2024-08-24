@@ -230,6 +230,22 @@ ul.tl li .item-detail {
 }
 
 
+.other {
+  margin-top: 50px;
+  clear: both;
+}
+.other:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.other img {
+  float: left;
+  margin: 0 10px 10px 0;
+  width: 600px;
+}
+
+
 .pill {
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
