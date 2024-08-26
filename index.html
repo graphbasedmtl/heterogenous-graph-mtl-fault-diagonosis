@@ -250,6 +250,36 @@ in the algorithm. By performing all the iterations in a hierarchical manner
           <b> Abstract: </b>Timely detection of electrical faults is of paramount importance for efficient operation of the smart grid. To better equip the power grid operators to prevent grid-wide cascading failures, the detection of fault occurrence and its type must be accompanied by accurately locating the fault. In this work, we propose a multi-task learning architecture that encodes the graph structure of the distribution network through a shared graph neural network (GNN) to both classify and detect faults and their locations simultaneously. Deploying GNNs allows for representation learning of the grid structure which can later be used to optimize grid operation. The proposed model has been tested on the IEEE-123 distribution system. Numerical tests verify that the proposed algorithm outperforms existing approaches.
       </p>
 
+      <h2>How To Cite This Work</h2>
+    <p>
+        Use the following information to cite the paper.
+      </p>
+<div class="card projcard">
+          <div id="copy">
+                <h4>Bibliography</h4>
+          </div>
+            <div class="card-block">
+              <p id="bibliography-text" style="text-indent: -3em; margin-left: 3em;" class="card-text clickselect">
+                Chanda, Dibaloke, and Nasim Yahya Soltani. "A Heterogeneous Graph-Based Multi-Task Learning for Fault Event Diagnosis in Smart Grid." 
+                <em>IEEE Transactions on Power Systems (2024).</em>
+                </nobr>
+              </p>
+            </div>
+
+                <div id="copy">
+                    <h4>Bibtex </h4><button id="copy-bibtex" style="outline: none; border: none;background-color: transparent;" ><i class="fa fa-clone copy-text"></i></button>
+                </div>
+              
+            <div class="card-block">
+              <pre id="bibtex-text" class="card-text clickselect">@article{chanda2024heterogeneous,
+                title={A Heterogeneous Graph-Based Multi-Task Learning for Fault Event Diagnosis in Smart Grid},
+                author={Chanda, Dibaloke and Soltani, Nasim Yahya},
+                journal={IEEE Transactions on Power Systems},
+                year={2024},
+                publisher={IEEE}
+              }
+      </pre>
+
 
 
     </div>
@@ -272,16 +302,17 @@ in the algorithm. By performing all the iterations in a hierarchical manner
   </footer>
 <script src="https://kit.fontawesome.com/a03b5c7365.js" crossorigin="anonymous"></script>
 
+
+
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-  const bibtexText = `@inproceedings{chanda2023graph,
-  title={Graph-Based Multi-Task Learning For Fault Detection In Smart Grid},
+  const bibtexText = `@article{chanda2024heterogeneous,
+  title={A Heterogeneous Graph-Based Multi-Task Learning for Fault Event Diagnosis in Smart Grid},
   author={Chanda, Dibaloke and Soltani, Nasim Yahya},
-  booktitle={2023 IEEE 33rd International Workshop on Machine Learning for Signal Processing (MLSP)},
-  pages={1--6},
-  year={2023},
-  organization={IEEE}
-  }`;
+  journal={IEEE Transactions on Power Systems},
+  year={2024},
+  publisher={IEEE}
+}`;
 
   document.getElementById('copy-bibtex').addEventListener('click', function() {
       copyToClipboard(bibtexText); changeIcon(this);
